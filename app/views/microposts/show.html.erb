@@ -5,6 +5,6 @@
 <div class="btn-group" role="group">
   <a href="<%= like_micropost_url(@micropost) %>" class="btn btn-success"><i class="bi bi-hand-thumbs-up"></i> Like MicroPost</a>
   <a href="<%= edit_micropost_path(@micropost) %>" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Edit MicroPost</a>
-  <%= button_to "<i class='bi bi-trash'></i> Delete MicroPost".html_safe, @micropost, method: :delete, class: "btn btn-danger" %>
-
+  <a href="<%= microposts_url %>" class="btn btn-primary"><i class="bi bi-people-fill"></i> Back to Microposts</a>
 </div>
+<%= button_to "<i class='bi bi-trash'></i> Delete MicroPost".html_safe, @micropost, method: :delete, class: "btn btn-danger float-end" %>

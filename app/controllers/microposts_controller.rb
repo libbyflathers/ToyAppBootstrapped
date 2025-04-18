@@ -1,6 +1,8 @@
 class MicropostsController < ApplicationController
   before_action :set_micropost, only: %i[ show edit update destroy like]
 
+  before_action :set_user_options, only: %i[ new edit create]
+
   # GET /microposts or /microposts.json
   def index
     @microposts = Micropost.all
@@ -38,6 +40,9 @@ class MicropostsController < ApplicationController
         format.json { render json: @micropost.errors, status: :unprocessable_entity }
       end
     end
+  end
+  def set_user_options
+    @select_options = [["Select User",nil]] + User.all.map{ |user| [user.name,user.id] }
   end
 
   # PATCH/PUT /microposts/1 or /microposts/1.json

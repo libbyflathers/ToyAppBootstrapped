@@ -1,2 +1,29 @@
-<h1>Home#about</h1>
-<p>Find me in app/views/home/about.html.erb</p>
+<% content_for :title, "About Us" %>
+    <div class="d-flex flex-column align-items-center">
+    <div class="card mb-3" style="max-width: 800px;">
+      <div class="card-header text-center">
+        About
+      </div>
+      
+      <div class="row g-0">
+        <div class="col-md-4">
+          <%= image_tag 'camellogo.png', class: "img-fluid rounded-start", alt: "Logo" %>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Learn About Us!</h5>
+            <p class="card-text">
+              This site was created by the Spring 2025 Web Technologies class as a sample of what a website with a database could look like.
+              On this app all you need is an email to be able to access a world of posts! Everyone is able to post content that is to their liking
+              and others can like the posts! A social platform to stay connected to all of your friends and to share to your hearts content!
+              Happy Posting
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card-footer text-center">
+        - The COM 214 Class (Libby)
+      </div>
+    </div>
+  </div>

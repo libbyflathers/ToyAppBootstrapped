@@ -4,6 +4,10 @@ class Micropost < ApplicationRecord
 
 
 	def details
-		"By #{self.user.name} on #{self.created_at.strftime("%m/%d/%Y at %H:%M")}"
+		if self.user.nil?
+			return "Created on #{self.created_at.strftime("%m/%d/%Y at %H:%M)}")}"
+		else
+			return "By #{self.user.name} on #{self.created_at.strftime("%m/%d/%Y at %H:%M")}"
+		end
 	end
 end

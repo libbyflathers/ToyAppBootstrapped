@@ -1,12 +1,15 @@
 <% content_for :title, "Editing micropost" %>
 
-<h1>Editing micropost</h1>
-
-<%= render "form", micropost: @micropost %>
-
+<div class="card">
+  <div class="card-header"><i class="bi bi-pencil-square"></i> Edit Micropost </div>
+  <div class="card-body">
+    <div class="card-group" id="microposts">
+      <%= render "form", micropost: @micropost %>
+    </div>
+  </div>
+</div>
 <br>
-
 <div>
-  <%= link_to "Show this micropost", @micropost %> |
-  <%= link_to "Back to microposts", microposts_path %>
+  <a href="<%= micropost_url(micropost: @micropost) %>" class= "btn btn-info">Show Post</a>
+  <a href="<%= microposts_url %>" class="btn btn-primary"><i class="bi bi-people-fill"></i> Back to Microposts </a>
 </div>

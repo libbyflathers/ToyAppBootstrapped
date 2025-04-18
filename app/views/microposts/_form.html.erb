@@ -15,15 +15,16 @@
     <span class="input-group-text">USER ID</span>
     
 
-    <%= form.select :user_id, options_for_select(@select_options,:selected=>nil),{}, {:class => 'form-control'} %>
+    <%= form.select :user_id, options_for_select(@select_options,:selected=>micropost.user_id),{}, {:class => 'form-control'} %>
   </div>
 
   <div class="input-group">
     <span class="input-group-text">CONTENT</span>
-    <%= form.text_area :content, class:"form-control", placeholder: "CONTENT", :rows => "3" %>
+    <%= form.text_area :content, class:"form-control", placeholder: "CONTENT", :rows => "6" %>
   </div>
 
   <div>
-    <button type="submit" class="btn btn-primary">Create MicroPost</button>
+    <br>
+    <button type="submit" class="btn btn-success">Submit</button>
   </div>
 <% end %>

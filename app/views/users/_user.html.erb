@@ -10,7 +10,8 @@
     <span class="badge text-bg-success"><%= pluralize(user.microposts.count,'micropost') %> created!</span>
   </div>
   <div class="card-footer">
-    <%= button_to "Destroy this user", @user, method: :delete, class: "btn btn-danger btn-sm" %>
     <small class="text-body-secondary"><%= user.details %></small>
+    <%= button_to "Destroy this user", @user, method: :delete, class: "btn btn-danger btn-sm float-end" %>
+    <a href="<%= users_url %>" class="btn btn-primary my-2 btn-sm"><i class="bi bi-people-fill"></i> Back to Users</a>
   </div>
 </div>

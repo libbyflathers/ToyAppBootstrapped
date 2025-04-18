@@ -11,17 +11,19 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="input-group">
+    <span class="input-group-text">Name</span>
+    <%= form.text_field :name, class:"form-control", placeholder: "Jane Doe", :rows => "1" %>
+    
+  </div>
+<br>
+  <div class="input-group">
+    <span class="input-group-text">Email</span>
+    <%= form.text_field :email, class:"form-control", placeholder: "example@gmail.com", :rows => "1" %>
   </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+<div>
+<br>
+  <button type="submit" class="btn btn-success">Submit</button>
   </div>
 <% end %>

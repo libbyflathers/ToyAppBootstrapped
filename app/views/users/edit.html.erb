@@ -1,12 +1,15 @@
 <% content_for :title, "Editing user" %>
 
-<h1>Editing user</h1>
-
-<%= render "form", user: @user %>
-
+<div class="card">
+  <div class="card-header"><i class="bi bi-pencil-square"></i> Edit User </div>
+  <div class="card-body">
+    <div class="card-group" id="users">
+      <%= render "form", user: @user %>
+    </div>
+  </div>
+</div>
 <br>
-
 <div>
-  <%= link_to "Show this user", @user %> |
-  <%= link_to "Back to users", users_path %>
+  <a href="<%= user_url(user: @user) %>" class= "btn btn-info">Show User</a>
+  <a href="<%= users_url %>" class="btn btn-primary"><i class="bi bi-people-fill"></i> Back to Users </a>
 </div>
